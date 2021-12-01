@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Bikes from './components/Bikes';
 
 function App() {
+
+  const bikes = [
+    {
+      id: 1,
+      name: "Horske",
+      price: 500
+    },
+    {
+      id: 2,
+      name: "Detske",
+      price: 200
+    },
+    {
+      id: 3,
+      name: "Silnicni",
+      price: 1500
+    },
+    {
+      id: 4,
+      name: "Gravel",
+      price: 2500
+    },
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Kolosalon</h1>
+      <Bikes bikes={bikes}/>
     </div>
   );
 }
